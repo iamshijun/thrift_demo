@@ -34,16 +34,12 @@ public class TZlibTransportTestHelloServiceServer implements Runnable{
 		HelloEchoHandler helloEchoHandler = new HelloEchoHandler();
 		HelloEcho.Processor<HelloEchoHandler> helloEchoProcessor = new HelloEcho.Processor<>(
 				helloEchoHandler);
-
-		//TProtocolFactory protocolFactory = new TJSONProtocol.Factory()/*new TCompactProtocol.Factory()*/;
-		//Args中默认in,out protocolFactory都是TBinaryProtocol.Factory 所以可以不指定
 		
 		TTransportFactory transportFactory = new TZlibTransport.Factory();
 		
 		TServer server = new TSimpleServer(
 				new Args(serverTransport)
 						.processor(helloEchoProcessor)
-						/*.protocolFactory(protocolFactory)*/
 						.transportFactory(transportFactory)
 				);
 

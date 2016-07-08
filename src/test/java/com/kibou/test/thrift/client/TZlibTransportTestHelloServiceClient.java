@@ -16,7 +16,7 @@ public class TZlibTransportTestHelloServiceClient {
 		try (TTransport baseTransport = new TSocket("localhost", 9090);){
 			baseTransport.open();
 
-			//×¢Òâserver¶Ë Ò²ĞèÒªÊ¹ÓÃÍ¬ÑùµÄTTransport»ò¶ÔÓ¦µÄTTransportFactory
+			//æ³¨æ„serverç«¯ ä¹Ÿéœ€è¦ä½¿ç”¨åŒæ ·çš„TTransportæˆ–å¯¹åº”çš„TTransportFactory
 			TTransport transport = new TZlibTransport(baseTransport);
 
 			TProtocol protocol = new TBinaryProtocol(transport);

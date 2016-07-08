@@ -34,7 +34,7 @@ public class MyThriftHelloServiceServer implements Runnable{
 				helloEchoHandler);
 
 		//TProtocolFactory protocolFactory = new TJSONProtocol.Factory()/*new TCompactProtocol.Factory()*/;
-		//Args中默认in,out protocolFactory都是TBinaryProtocol.Factory 所以可以不指定
+		//Args涓粯璁n,out protocolFactory閮芥槸TBinaryProtocol.Factory 鎵�浠ュ彲浠ヤ笉鎸囧畾
 		
 		TServer server = new TSimpleServer(
 				new Args(serverTransport)

@@ -14,14 +14,13 @@ public class TJONProtocolTestServiceClient {
 		try (TTransport baseTransport = new TSocket("localhost", 9090);){
 			baseTransport.open();
 
-			//注意server端 也需要使用同样的TTransport或对应的TTransportFactory
 			TProtocol protocol = new TJSONProtocol(baseTransport);
 
 			HelloEcho.Client client = new HelloEcho.Client(protocol);
 //			String sayHelloRet = client.sayHello("nyannyan");
 //			System.out.println(sayHelloRet);
 			
-			//cooperate with TProtocolRecvDisplay 可以看到具体发送的消息
+			//cooperate with TProtocolRecvDisplay
 			client.send_sayHello("nyannyan");
 			client.send_sayHello("shijun");
 			client.send_sayHello("miru");

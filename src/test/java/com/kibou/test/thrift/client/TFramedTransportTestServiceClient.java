@@ -12,7 +12,7 @@ import com.kibou.test.thrift.server.AsyncServiceServer;
 import tutorial.HelloEcho;
 
 /**
- * Ê¹ÓÃ TFrameTransport ºÍ Ö±½ÓÊ¹ÓÃTFrameTransportµÄserver¶Ë,»òÕßÊ¹ÓÃTNonblockingTransportµÄserver¶Ë( {@link AsyncServiceServer} )²âÊÔ
+ * ä½¿ç”¨ TFrameTransport å’Œ ç›´æŽ¥ä½¿ç”¨TFrameTransportçš„serverç«¯,æˆ–è€…ä½¿ç”¨TNonblockingTransportçš„serverç«¯( {@link AsyncServiceServer} )æµ‹è¯•
  */
 public class TFramedTransportTestServiceClient {
 	public static void main(String[] args) {

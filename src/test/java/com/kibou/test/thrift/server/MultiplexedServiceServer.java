@@ -15,10 +15,10 @@ import tutorial.Calculator;
 import tutorial.HelloEcho;
 
 /**
- * server¶ËºÍclient¶Ë ¶¼ĞèÒª×¢ÒâÈç¹ûÒ»¸öserver(Ò»¸öhostname:port)×éºÏ¿ÉÒÔÌá¹©¶à¸öRPCµ÷ÓÃµÄ»°
- * Ê¹ÓÃTMultiplexedProcessor,¸ù¾İTMessageÖĞµÄÌáÈ¡³öÀ´µÄservienameÕÒµ½Êµ¼ÊµÄProcessor,
- * Ïà¶ÔµÄclient¶ËÔÚµ÷ÓÃµÄÊ±ºòĞèÒª¸ú¶¨servicenameÈÃserverÖªµÀµ÷ÓÃµÄÊÇÄÄ¸öservice(½Ó¿ÚÀà),¶ÔÓ¦µÄÊ¹ÓÃ
- * TMultiplexedProtocol-°ü×°TTProtocolÔÚÔ­ÓĞµÄ»ù´¡ÉÏÌí¼Óservice metadata
+ * serverç«¯å’Œclientç«¯ éƒ½éœ€è¦æ³¨æ„å¦‚æœä¸€ä¸ªserver(ä¸€ä¸ªhostname:port)ç»„åˆå¯ä»¥æä¾›å¤šä¸ªRPCè°ƒç”¨çš„è¯
+ * ä½¿ç”¨TMultiplexedProcessor,æ ¹æ®TMessageä¸­çš„æå–å‡ºæ¥çš„servienameæ‰¾åˆ°å®é™…çš„Processor,
+ * ç›¸å¯¹çš„clientç«¯åœ¨è°ƒç”¨çš„æ—¶å€™éœ€è¦è·Ÿå®šservicenameè®©serverçŸ¥é“è°ƒç”¨çš„æ˜¯å“ªä¸ªservice(æ¥å£ç±»),å¯¹åº”çš„ä½¿ç”¨
+ * TMultiplexedProtocol-åŒ…è£…TTProtocolåœ¨åŸæœ‰çš„åŸºç¡€ä¸Šæ·»åŠ service metadata
  */
 public class MultiplexedServiceServer {
 
@@ -49,7 +49,7 @@ public class MultiplexedServiceServer {
 							helloEchoProcessor);
 
 					TProtocolFactory protocolFactory = new TJSONProtocol.Factory()/*new TCompactProtocol.Factory()*/;
-					//ArgsÖĞÄ¬ÈÏin,out protocolFactory¶¼ÊÇTBinaryProtocol.Factory ËùÒÔ¿ÉÒÔ²»Ö¸¶¨
+					//Argsä¸­é»˜è®¤in,out protocolFactoryéƒ½æ˜¯TBinaryProtocol.Factory æ‰€ä»¥å¯ä»¥ä¸æŒ‡å®š
 					/*TServer server = new TSimpleServer(
 							new Args(serverTransport)
 									.processor(multiplexedProcessor)

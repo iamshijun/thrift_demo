@@ -32,7 +32,7 @@ public class MultiplexedServiceClient {
 		
 		TMultiplexedProtocol calculatorMultiplexedProtocol = new TMultiplexedProtocol(baseProtocol, Calculator.class.getSimpleName());
 		Calculator.Client caculatorClient = new Calculator.Client(calculatorMultiplexedProtocol);
-		//ps: server¶ËÏà¶ÔÓ¦µÄÊ¹ÓÃµÄÊÇ TMultiplexedProcessor
+		//ps: serverç«¯ç›¸å¯¹åº”çš„ä½¿ç”¨çš„æ˜¯ TMultiplexedProcessor
 		
 		try {
 			String echo = helloEchoClient.sayHello("shijun");
